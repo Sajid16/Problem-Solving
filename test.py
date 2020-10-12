@@ -34,55 +34,55 @@
 
 ##############################################
 
-# numbers = list(map(int, input().split(',')))
-# result = []
-# for i in range(0, len(numbers)):
-#     for j in range(i+1, len(numbers)):
-#         if numbers[j] == numbers[i] and numbers[j] not in result:
-#             result.append(numbers[i])
-#     # print(i)
-# print(result)
+numbers = list(map(int, input().split(',')))
+result = []
+for i in range(0, len(numbers)):
+    for j in range(i+1, len(numbers)):
+        if numbers[j] == numbers[i] and numbers[j] not in result:
+            result.append(numbers[i])
+    # print(i)
+print(result)
 
 ###########################################
-
-total = 0
-test2 = []
-result = ''
-
-with open('input.txt', 'r') as inp, open('output.txt', 'w') as outp:
-    for line in inp:
-        try:
-            # print(line)
-            test1 = list(line)
-            for i in range(len(test1) - 1, -1, -1):
-                # if test1[i] == '\n':
-                #     pass
-                # else:
-                test2.append(test1[i])
-            # num = int(line)
-            # total += num
-        except ValueError:
-            print('{} is not a number!'.format(line))
-    # outp.write(str(total))
-for words in test2:
-    if words != '\n':
-        result += words
-    else:
-        result += ' '
-print(result)
+#
+# total = 0
+# test2 = []
+# result = ''
+#
+# with open('input.txt', 'r') as inp, open('output.txt', 'w') as outp:
+#     for line in inp:
+#         try:
+#             # print(line)
+#             test1 = list(line)
+#             for i in range(len(test1) - 1, -1, -1):
+#                 # if test1[i] == '\n':
+#                 #     pass
+#                 # else:
+#                 test2.append(test1[i])
+#             # num = int(line)
+#             # total += num
+#         except ValueError:
+#             print('{} is not a number!'.format(line))
+#     # outp.write(str(total))
+# for words in test2:
+#     if words != '\n':
+#         result += words
+#     else:
+#         result += ' '
+# print(result)
+# # print('Total of all numbers: {}'.format(total))
+#
+# ####################################################
+#
+# total = 0
+#
+# with open('input.txt', 'r') as inp, open('output.txt', 'w') as outp:
+#     for line in inp:
+#         try:
+#             num = float(line)
+#             total += num
+#             outp.write(line)
+#         except ValueError:
+#             print('{} is not a number!'.format(line))
+#
 # print('Total of all numbers: {}'.format(total))
-
-####################################################
-
-total = 0
-
-with open('input.txt', 'r') as inp, open('output.txt', 'w') as outp:
-    for line in inp:
-        try:
-            num = float(line)
-            total += num
-            outp.write(line)
-        except ValueError:
-            print('{} is not a number!'.format(line))
-
-print('Total of all numbers: {}'.format(total))

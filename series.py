@@ -18,7 +18,7 @@
 
 ######################################
 
-#using one loop only
+# using one loop only
 
 count = 0
 start = True
